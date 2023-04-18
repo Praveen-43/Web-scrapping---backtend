@@ -20,7 +20,7 @@ const PORT = process.env.PORT;
 MongoConnect();
 //Middle ware
 app.use(express.json());
-app.use(cors());
+app.use(cors({origin:'*'}));
 
 //secured route with authentication
 app.use("/amazon", auth, amazonRouter);
